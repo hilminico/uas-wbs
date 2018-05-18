@@ -43,4 +43,20 @@ class BookController extends Controller
         $book = Book::all();
         return $book ;
     }
+
+    public function updateBook(Request $request)
+    {
+        $id =$request->get('id');
+    
+        $data = [
+            'name' =>$request->get('name'),
+            'judul' => $request->get('judul') ,
+            'pengarang' => $request->get('pengarang') ,
+            'penerbit' => $request->get('penerbit') ,
+        ];
+        $update = Book::where('id', $id)->update($data);
+        if ($update){
+            return 'berhasil';
+        }
+    }
 }
