@@ -13,7 +13,7 @@ class Kategori extends Migration
      */
     public function up()
     {
-        Schema::create('kategori', function (Blueprint $table) {
+        Schema::create('kategoris', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
@@ -27,7 +27,7 @@ class Kategori extends Migration
      */
     public function down()
     {
-        Schema::drop('kategori');
+        Schema::drop('kategoris');
 
     }
 }

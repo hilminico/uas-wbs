@@ -29,4 +29,18 @@ class BookController extends Controller
             return 'berhasil';
         }
     }
+
+    public function deleteBook($id)
+    {
+        $book = Book::find($id);
+            if($book->delete()) {
+            return 'berhasil';
+        }
+    }
+
+    public function readBook(Request $request)
+    {
+        $book = Book::all();
+        return $book ;
+    }
 }

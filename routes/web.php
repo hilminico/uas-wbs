@@ -16,3 +16,5 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/bookpost', 'BookController@addBook');
+$router->delete('/bookdelete/{id}', 'BookController@deleteBook');
+$router->post('/bookread', 'BookController@readBook');

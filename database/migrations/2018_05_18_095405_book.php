@@ -13,7 +13,7 @@ class Book extends Migration
      */
     public function up()
     {
-        Schema::create('book', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('judul');
@@ -30,6 +30,6 @@ class Book extends Migration
      */
     public function down()
     {
-        Schema::drop('book');
+        Schema::drop('books');
     }
 }
